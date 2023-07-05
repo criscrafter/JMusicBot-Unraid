@@ -8,7 +8,7 @@ WORKDIR /app
 RUN mkdir config
 
 # Copy the config.txt file into the container
-COPY config.txt /app/config
+COPY config.txt /app/config/config.txt
 
 # Copy the .jar file into the container
 COPY JMusicBot-0.3.9.jar .
