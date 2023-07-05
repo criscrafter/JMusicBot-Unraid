@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: criscrafter/JMusicBot:latest
+          tags: criscrafter/jmusicbot:latest
