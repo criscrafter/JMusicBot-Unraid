@@ -14,4 +14,4 @@ COPY config.txt /app/config
 COPY JMusicBot-0.3.9.jar .
 
 # Set the entrypoint to run the .jar file
-ENTRYPOINT ["java", "-Dconfig=/app/config/config.txt", "-jar", "JMusicBot-0.3.9.jar"]
+ENTRYPOINT ["java", "-Dnogui=true", "-Dconfig=/app/config/config.txt", "-jar", "JMusicBot-0.3.9.jar"]
