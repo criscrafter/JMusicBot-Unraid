@@ -5,7 +5,7 @@ FROM openjdk:11
 WORKDIR /app
 
 # Copy the .jar file into the container
-COPY your-application.jar .
+COPY JMusicBot-0.3.9.jar .
 
 # Set the entrypoint to run the .jar file
 ENTRYPOINT ["java", "-jar", "JMusicBot-0.3.9.jar"]
