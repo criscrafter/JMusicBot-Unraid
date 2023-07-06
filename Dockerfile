@@ -12,7 +12,6 @@ COPY JMusicBot-0.3.9.jar .
 
 # Copy the config.txt file into the container
 COPY config.txt /app/config.txt
-RUN chmod a+w /app/config.txt
 
 # Copy the entrypoint script to the container
 COPY entrypoint.sh /app/entrypoint.sh

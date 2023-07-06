@@ -6,5 +6,8 @@ if [ ! -f "/app/config/config.txt" ]; then
   cp /app/config.txt /app/config/
 fi
 
+# Set the permissions for the config.txt file
+chmod a+rw /app/config/config.txt
+
 # Start the JAR file
 java -Dnogui=true -Dconfig=/app/config/config.txt -jar JMusicBot-0.3.9.jar
