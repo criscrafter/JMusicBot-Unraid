@@ -11,7 +11,7 @@ RUN mkdir config
 COPY JMusicBot-0.3.9.jar .
 
 # Copy the config.txt file into the container
-COPY --chown=root:root config.txt /app/config/
+COPY --chown=root:root config.txt /app/config.txt
 
 # Copy the entrypoint script to the container
 COPY entrypoint.sh /app/entrypoint.sh
