@@ -1,5 +1,5 @@
 # Base image
-FROM openjdk:11
+FROM eclipse-temurin:8-jre-alpine
 
 # Set working directory
 WORKDIR /app
