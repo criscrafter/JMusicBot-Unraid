@@ -1,6 +1,9 @@
 # Base image
 FROM eclipse-temurin:11-jre-alpine
 
+# Update the packages in the image
+RUN apk update && apk upgrade
+
 # Set working directory
 WORKDIR /app
 
