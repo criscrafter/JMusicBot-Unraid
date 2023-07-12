@@ -7,8 +7,8 @@ WORKDIR /app
 # Make config folder
 RUN mkdir config
 
-# Copy the .jar file into the container
-COPY JMusicBot-0.3.9.jar .
+# Download the .jar file using wget
+RUN wget -O JMusicBot-0.3.9.jar https://github.com/jagrosh/MusicBot/releases/download/0.3.9/JMusicBot-0.3.9.jar
 
 # Copy the config.txt file into the container
 COPY config.txt /app/config.txt
