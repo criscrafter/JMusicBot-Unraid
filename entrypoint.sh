@@ -9,5 +9,8 @@ fi
 # Set the permissions for the config.txt file
 chmod a+rw /app/config/config.txt
 
+# Get the newest JAR file name
+filename=$(ls -t /app | grep '.jar' | head -n 1)
+
 # Start the JAR file
-java -Dnogui=true -Dconfig=/app/config/config.txt -jar JMusicBot-0.3.9.jar
+java -Dnogui=true -Dconfig=/app/config/config.txt -jar "/app/$filename"
