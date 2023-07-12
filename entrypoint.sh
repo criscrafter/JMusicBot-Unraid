@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Check if config.txt exists in the config directory
 if [ ! -f "/app/config/config.txt" ]; then
