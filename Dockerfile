@@ -2,7 +2,7 @@
 FROM eclipse-temurin:8-jdk
 
 # Update the packages in the image
-RUN apk update && apk upgrade
+RUN apt-get update
 
 # Set working directory
 WORKDIR /app
@@ -11,7 +11,7 @@ WORKDIR /app
 RUN mkdir config
 
 # Download the .jar file using curl and wget
-RUN apk add --no-cache curl
+RUN apt-get install -y curl
 RUN response=$(curl -s https://api.github.com/repos/jagrosh/MusicBot/releases/latest) && \
     download_url=$(echo "$response" | grep -o '"browser_download_url": "[^"]*' | grep -o 'https://.*\.jar') && \
     filename=$(echo "$response" | grep -o '"name": "[^"]*' | grep -o '[^"]*\.jar') && \
