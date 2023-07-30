@@ -1,5 +1,5 @@
 # Base image
-FROM eclipse-temurin:8-jdk
+FROM eclipse-temurin:8-jre
 
 # Update the packages in the image
 RUN apt-get update
