@@ -1,5 +1,5 @@
 # Base image
-FROM eclipse-temurin:11-jre
+FROM eclipse-temurin:8-jre
 
 # Update the packages in the image
 RUN apt-get update
@@ -11,11 +11,7 @@ WORKDIR /app
 RUN mkdir config
 
 # Download the .jar file using curl and wget
-RUN apt-get install -y curl
-RUN response=$(curl -s https://api.github.com/repos/jagrosh/MusicBot/releases/latest) && \
-    download_url=$(echo "$response" | grep -o '"browser_download_url": "[^"]*' | grep -o 'https://.*\.jar') && \
-    filename=$(echo "$response" | grep -o '"name": "[^"]*' | grep -o '[^"]*\.jar') && \
-    wget -O "$filename" "$download_url"
+RUN wget -O JMusicBot-0.3.9.jar https://github.com/jagrosh/MusicBot/releases/download/0.3.9/JMusicBot-0.3.9.jar
 
 # Copy the config.txt file into the container
 COPY config.txt /app/config.txt
